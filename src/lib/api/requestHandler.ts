@@ -1,4 +1,5 @@
 import path from 'path'
+import { URL } from 'url'
 import { error } from '@sveltejs/kit'
 
 import { defaultConfig } from './constants/defaultConfig'
@@ -36,6 +37,20 @@ export const requestHandler =
     const url = event.url.searchParams.get('url') ?? ''
     const width = Number(event.url.searchParams.get('w') ?? '')
     const quality = Number(event.url.searchParams.get('q') ?? '')
+
+    // make sure that this url is allowed to optimize
+    if (mergedConfig.remoteDomains !== undefined && !mergedConfig.remoteDomains.includes(new URL(url).hostname)) {
+      throw error(403, 'not allowed to optimize')
+    }
+
+    // make sure that referer is valid
+    if (
+      // only active when config exists, and running in production mode
+      (process.env.NODE_ENV === 'production' && mergedConfig.allowedDomains !== undefined) &&
+      !mergedConfig.allowedDomains.includes(new URL(event.request.headers.get('referer') ?? 'http://localhost').hostname)
+    ) {
+      throw error(403, 'not allowed to access')
+    }
 
     // get target file type to optimize
     const mimeType = getSupportedMimeType(
