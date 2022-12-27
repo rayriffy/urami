@@ -11,6 +11,12 @@ Automatic image optimization for SvelteKit, inspired by NextJS
 
 Check out full sample at [`src/routes`](./src/routes)
 
+Install dependencies
+
+```
+pnpm add svelte-aio
+```
+
 In `routes/api/_images`, create `+server.ts` endpoint
 
 ```ts
