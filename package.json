@@ -1,6 +1,16 @@
 {
   "name": "svelte-aio",
   "version": "0.1.0",
+  "author": {
+    "name": "Phumrapee Limpiancop",
+    "email": "contact@rayriffy.com",
+    "url": "https://rayriffy.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rayriffy/svelte-aio.git"
+  },
   "scripts": {
     "dev": "vite dev",
     "build": "svelte-kit sync && svelte-package",
