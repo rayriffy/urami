@@ -1,38 +1,37 @@
-# create-svelte
+# svelte-aio
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+Automatic image optimization for SvelteKit, inspired by NextJS
 
-## Creating a project
+## Table of contents
 
-If you're seeing this, you've probably already done this step. Congrats!
+1. [Usage](#usage)
+2. [Configuration](#configuration)
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+## Usage
 
-# create a new project in my-app
-npm create svelte@latest my-app
+Check out full sample at [`src/routes`](./src/routes)
+
+In `routes/api/_images`, create `+server.ts` endpoint
+
+```ts
+import { requestHandler } from 'svelte-aio/api'
+
+import type { RequestHandler } from '@sveltejs/kit'
+
+export const GET: RequestHandler = requestHandler()
 ```
 
-## Developing
+Then use normally (almost) like `next/image`
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+```svelte
+<!-- +page.ts -->
+<Image
+  src="https://demo.rayriffy.com/tom-scott.jpg"
+  width={801}
+  height={801}
+  alt="Tom Scott"
+  class="rounded-xl shadow-md"
+/>
 ```
 
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+## Configuration
