@@ -4,6 +4,8 @@ Automatic image optimization for SvelteKit, inspired by NextJS
 
 > This library are still under construction, many bugs and missing features. Feel free to contribute and making bugs report.
 
+> Do not use this library with dynamic image yet due to improper Cache-Control configuration. This will be fixed soon
+
 ## Table of contents
 
 1. [Usage](#usage)
