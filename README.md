@@ -84,7 +84,7 @@ Unset this option will tell API to optimize **ALL IMAGES** from **EVERYWHERE**
 
 List of domains that allowed to use the API, this will be checked via header `Referer`
 
-Unset this option will allow anywhere to request image from this API.
+Only affects on `NODE_ENV=production`. Unset this option will allow anywhere to request image from this API.
 
 ### ttl
 
