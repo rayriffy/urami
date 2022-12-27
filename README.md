@@ -2,6 +2,8 @@
 
 Automatic image optimization for SvelteKit, inspired by NextJS
 
+> This library are still under construction, many bugs and missing features. Feel free to contribute and making bugs report.
+
 ## Table of contents
 
 1. [Usage](#usage)
@@ -31,6 +33,10 @@ Then use normally (almost) like `next/image`
 
 ```svelte
 <!-- +page.ts -->
+<script lang="ts">
+  import Image from 'svelte-aio'
+</script>
+
 <Image
   src="https://demo.rayriffy.com/tom-scott.jpg"
   width={801}
@@ -41,3 +47,57 @@ Then use normally (almost) like `next/image`
 ```
 
 ## Configuration
+
+Server configrations can be specified via option params. **All parameters are optional!**
+
+```ts
+export const GET: RequestHandler = requestHandler({
+  avif: false,
+  remoteDomains: ['demo.rayriffy.com'],
+  allowedDomains: ['svelte-aio.vercel.app'],
+  ttl: 1000 * 60 * 60 * 24 * 7,
+  storePath: '.svelte-kit/images',
+})
+```
+
+### avif
+
+`boolean`
+
+Enable AVIF image format. Defaults to `false`
+
+> **Warning:** optimizing image into AVIF format currently not reccomended due to high CPU and memory usage. Overall performance is not great when comparing to WebP.
+
+### remoteDomains
+
+`string[] | undefined`
+
+List of domains that API will be allowed to optimize. Defaults to *unset*
+
+From example above, `remoteDomains: ['demo.rayriffy.com'],` means that API will only be allowed to optimize images that served from `demo.rayriffy.com`.
+
+Unset this option will tell API to optimize **ALL IMAGES** from **EVERYWHERE**
+
+### allowedDomains
+
+`string[] | undefined`
+
+List of domains that allowed to use the API, this will be checked via header `Referer`
+
+Unset this option will allow anywhere to request image from this API.
+
+### ttl
+
+`number`
+
+Time until images will become invalidated, defaults to **7 days**
+
+Values are in **milliseconds**
+
+### storePath
+
+`string`
+
+Directory path to cache optimized images. Defaults to `.svelte-kit/images`
+
+Provided paths will be relative to `process.cwd()`
