@@ -1,5 +1,7 @@
 # svelte-aio
 
+[![NPM](https://img.shields.io/npm/v/svelte-aio)](https://www.npmjs.com/package/svelte-aio)
+
 Automatic image optimization for SvelteKit, inspired by NextJS
 
 > This library are still under construction, many bugs and missing features. Feel free to contribute and making bugs report.
