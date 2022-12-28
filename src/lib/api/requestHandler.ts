@@ -1,5 +1,6 @@
 import path from 'path'
 import { URL } from 'url'
+import isAnimated from 'is-animated'
 import { error } from '@sveltejs/kit'
 
 import { defaultConfig } from './constants/defaultConfig'
@@ -19,6 +20,8 @@ import { writeImageToFileSystem } from './functions/writeImageToFileSystem'
 import type { RequestHandler } from '@sveltejs/kit'
 import type { Config } from '$lib/@types/Config'
 import type { ResponsePayload } from '$lib/@types/ResponsePayload'
+import { vectorTypes } from './constants/vectorTypes'
+import { animateableTypes } from './constants/animateableTypes'
 
 export const requestHandler =
   (config: Partial<Config> = {}): RequestHandler =>
@@ -89,6 +92,21 @@ export const requestHandler =
         detectContentType(upstreamBuffer) ||
         (fetchedImage.headers.get('Content-Type') ?? '')
       const maxAge = getMaxAge(fetchedImage.headers.get('Cache-Control'))
+
+      // if image is animated or vector then send original image
+      // TODO: Optimization for animated images, and vector
+      const vector = vectorTypes.includes(upstreamType)
+      const animated = animateableTypes.includes(upstreamType) && isAnimated(upstreamBuffer)
+      if (vector || animated) {
+        return sendResponse({
+          buffer: upstreamBuffer,
+          contentType: upstreamType,
+          maxAge: 0,
+          etag: getHash([upstreamBuffer])
+        }, 'MISS', {
+          'X-SvelteAIO-Optimization': 'animate-ignore'
+        })
+      }
 
       // get content type
       let contentType: string

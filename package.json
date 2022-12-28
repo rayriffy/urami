@@ -37,6 +37,7 @@
   "type": "module",
   "dependencies": {
     "@hapi/accept": "^6.0.0",
+    "is-animated": "^2.0.2",
     "send": "^0.18.0",
     "sharp": "^0.31.3"
   }
