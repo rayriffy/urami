@@ -21,7 +21,7 @@ import type { Config } from '$lib/@types/Config'
 import type { ResponsePayload } from '$lib/@types/ResponsePayload'
 
 export const requestHandler =
-  (config: Partial<Config>): RequestHandler =>
+  (config: Partial<Config> = {}): RequestHandler =>
   async event => {
     // build general config
     const mergedConfig = {
@@ -39,15 +39,22 @@ export const requestHandler =
     const quality = Number(event.url.searchParams.get('q') ?? '')
 
     // make sure that this url is allowed to optimize
-    if (mergedConfig.remoteDomains !== undefined && !mergedConfig.remoteDomains.includes(new URL(url).hostname)) {
+    if (
+      mergedConfig.remoteDomains !== undefined &&
+      !mergedConfig.remoteDomains.includes(new URL(url).hostname)
+    ) {
       throw error(403, 'not allowed to optimize')
     }
 
     // make sure that referer is valid
     if (
       // only active when config exists, and running in production mode
-      (process.env.NODE_ENV === 'production' && mergedConfig.allowedDomains !== undefined) &&
-      !mergedConfig.allowedDomains.includes(new URL(event.request.headers.get('referer') ?? 'http://localhost').hostname)
+      process.env.NODE_ENV === 'production' &&
+      mergedConfig.allowedDomains !== undefined &&
+      !mergedConfig.allowedDomains.includes(
+        new URL(event.request.headers.get('referer') ?? 'http://localhost')
+          .hostname
+      )
     ) {
       throw error(403, 'not allowed to access')
     }
