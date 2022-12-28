@@ -76,7 +76,7 @@ Enable AVIF image format. Defaults to `false`
 
 `string[] | undefined`
 
-List of domains that API will be allowed to optimize. Defaults to *unset*
+List of domains that API will be allowed to optimize. Defaults to _unset_
 
 From example above, `remoteDomains: ['demo.rayriffy.com'],` means that API will only be allowed to optimize images that served from `demo.rayriffy.com`.
 

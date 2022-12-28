@@ -56,6 +56,6 @@
     alt,
     height,
     width,
-    class: klass
+    class: klass,
   }}
 />

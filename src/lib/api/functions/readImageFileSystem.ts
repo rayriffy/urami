@@ -7,7 +7,7 @@ import type { ResponsePayload } from '$lib/@types/ResponsePayload'
 
 export const readImageFileSystem = async (
   cacheKey: string,
-  cacheDirectory: string,
+  cacheDirectory: string
 ): Promise<ResponsePayload | null> => {
   const now = Date.now()
 

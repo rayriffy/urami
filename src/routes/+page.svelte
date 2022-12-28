@@ -26,4 +26,3 @@
     class="rounded-xl shadow-md"
   />
 </main>
-
