@@ -17,9 +17,17 @@ export const writeImageToFileSystem = async (
   const targetDirectory = path.join(cacheDirectory, cacheKey)
   const targetFileName = `${maxAge}.${maxAge + Date.now()}.${etag}.${extension}`
 
-  await fs.promises.mkdir(targetDirectory, { recursive: true })
-  await fs.promises.writeFile(
-    path.join(targetDirectory, targetFileName),
-    buffer
-  )
+  // any case of failure (maybe due to filesystem space ran out) can be ignored,
+  // but it need to make sure it properly cleaned up
+  try {
+    await fs.promises.mkdir(targetDirectory, { recursive: true })
+    await fs.promises.writeFile(
+      path.join(targetDirectory, targetFileName),
+      buffer
+    )
+  } catch (e) {
+    await fs.promises
+      .rm(path.join(targetDirectory, targetFileName))
+      .catch(() => {})
+  }
 }
