@@ -10,7 +10,7 @@ const config = {
   preprocess: vitePreprocess(),
 
   kit: {
-    adapter: (process.env.BUN = 'true' ? bunAdapter() : autoAdapter()),
+    adapter: (process.env.BUN === 'true' ? bunAdapter() : autoAdapter()),
   },
 }
 
