@@ -47,6 +47,7 @@
   const builtSrc = loader(src, widths[widths.length - 1], quality)
 </script>
 
+<!-- svelte-ignore a11y-missing-attribute -->
 <img
   src={builtSrc}
   srcset={builtSrcset}
