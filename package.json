@@ -6,6 +6,10 @@
     "email": "contact@rayriffy.com",
     "url": "https://rayriffy.com"
   },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
   "svelte": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
