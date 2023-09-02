@@ -21,6 +21,16 @@ Install dependencies
 pnpm add svelte-aio
 ```
 
+To resolve all modules normally, we require you to set module resolution in `tsconfig.json` into `bundler` first.
+
+```json
+{
+  "compilerOptions": {
+    "moduleResolution": "bundler"
+  }
+}
+```
+
 In `routes/api/_images`, create `+server.ts` endpoint
 
 ```ts
