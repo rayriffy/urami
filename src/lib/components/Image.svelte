@@ -53,6 +53,7 @@
   srcset={builtSrcset}
   decoding="async"
   loading="lazy"
+  {...$$restProps}
   {...{
     alt,
     height,
