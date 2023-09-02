@@ -1,5 +1,11 @@
 # svelte-aio
 
+## 1.0.1
+
+### Patch Changes
+
+- c18fb00: missing `publishConfig` in package.json
+
 ## 1.0.0
 
 ### Major Changes
