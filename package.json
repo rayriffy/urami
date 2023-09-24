@@ -33,6 +33,20 @@
     "type": "git",
     "url": "git+https://github.com/rayriffy/svelte-aio.git"
   },
+  "keywords": [
+    "svelte",
+    "sveltekit",
+    "image",
+    "images",
+    "optimize",
+    "optimize-images",
+    "plugin",
+    "webp",
+    "jpg",
+    "jpeg",
+    "png",
+    "avif"
+  ],
   "scripts": {
     "dev": "vite dev",
     "build": "vite build && npm run package",
