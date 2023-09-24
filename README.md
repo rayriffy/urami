@@ -21,7 +21,7 @@ Install dependencies
 pnpm add svelte-aio
 ```
 
-To resolve all modules normally, we require you to set module resolution in `tsconfig.json` into `bundler` first.
+(Optional) To resolve export paths correctly in **VS Code**, we require you to set module resolution in `tsconfig.json` into `bundler` first.
 
 ```json
 {
