@@ -1,5 +1,12 @@
 # svelte-aio
 
+## 1.0.2
+
+### Patch Changes
+
+- e655f63: documented `moduleResolution` as optional steps
+- 2580f27: keywords tagging
+
 ## 1.0.1
 
 ### Patch Changes
