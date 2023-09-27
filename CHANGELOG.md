@@ -1,5 +1,11 @@
 # svelte-aio
 
+## 1.0.3
+
+### Patch Changes
+
+- 9f3c798: fix package description on npm
+
 ## 1.0.2
 
 ### Patch Changes
