@@ -1,0 +1,12 @@
+{
+  "name": "@urami/docs",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "vitepress dev",
+    "build": "vitepress build"
+  },
+  "devDependencies": {
+    "vitepress": "1.0.0-rc.22"
+  }
+}
