@@ -27,7 +27,7 @@ $ bun add @urami/solid
 ## Usage
 
 ```tsx
-import Image from '@urami/react'
+import Image from '@urami/solid'
 
 const Component = () => {
   return (
