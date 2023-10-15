@@ -1,7 +1,6 @@
 {
   "name": "@urami/types",
   "version": "0.0.0",
-  "description": "Automatic image optimization component for Svelte",
   "author": {
     "name": "Phumrapee Limpiancop",
     "email": "contact@rayriffy.com",
