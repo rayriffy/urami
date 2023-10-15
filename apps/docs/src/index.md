@@ -20,7 +20,7 @@ hero:
 features:
   - icon: 🖼️
     title: Optimized
-    details: All images are optimized with Next.js's automatic image optimization
+    details: Images are optimized into the best format and size based on the visitor's browser
   - icon: 🔧
     title: Easy to implement
     details: Just add a few lines of code to your project and you're good to go
