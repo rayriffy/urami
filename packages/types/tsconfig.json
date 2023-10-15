@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "@tsconfig/recommended/tsconfig.json",
+  "compilerOptions": {
+    "lib": ["es2023"],
+    "verbatimModuleSyntax": true,
+    "noEmit": true
+  }
+}

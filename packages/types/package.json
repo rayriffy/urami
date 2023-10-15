@@ -1,0 +1,34 @@
+{
+  "name": "@urami/types",
+  "version": "0.0.0",
+  "description": "Automatic image optimization component for Svelte",
+  "author": {
+    "name": "Phumrapee Limpiancop",
+    "email": "contact@rayriffy.com",
+    "url": "https://rayriffy.com"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rayriffy/urami.git"
+  },
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "src",
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --dts --sourcemap",
+    "dev": "pnpm run build --watch"
+  },
+  "keywords": [],
+  "devDependencies": {
+    "@tsconfig/recommended": "^1.0.3"
+  }
+}

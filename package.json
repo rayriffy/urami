@@ -1,90 +1,19 @@
 {
-  "name": "svelte-aio",
-  "version": "1.0.3",
-  "author": {
-    "name": "Phumrapee Limpiancop",
-    "email": "contact@rayriffy.com",
-    "url": "https://rayriffy.com"
-  },
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org"
-  },
-  "svelte": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "svelte": "./dist/index.js"
-    },
-    "./api": {
-      "types": "./dist/api/index.d.ts",
-      "svelte": "./dist/api/index.js"
-    }
-  },
-  "files": [
-    "dist",
-    "!dist/**/*.test.*",
-    "!dist/**/*.spec.*"
-  ],
-  "license": "MIT",
-  "type": "module",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/rayriffy/svelte-aio.git"
-  },
-  "keywords": [
-    "svelte",
-    "sveltekit",
-    "image",
-    "images",
-    "optimize",
-    "optimization",
-    "optimize-images",
-    "plugin",
-    "sharp",
-    "webp",
-    "jpg",
-    "jpeg",
-    "png",
-    "avif"
-  ],
+  "name": "urami",
+  "packageManager": "pnpm@8.6.10",
+  "private": true,
   "scripts": {
-    "dev": "vite dev",
-    "build": "vite build && npm run package",
-    "preview": "vite preview",
-    "package": "svelte-kit sync && svelte-package && publint",
-    "prepublishOnly": "npm run package",
-    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
-    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-    "lint": "prettier --plugin-search-dir . --check .",
-    "format": "prettier --plugin-search-dir . --write .",
-    "web:build": "vite build"
-  },
-  "peerDependencies": {
-    "svelte": "^4.0.0"
-  },
-  "dependencies": {
-    "@hapi/accept": "^6.0.2",
-    "is-animated": "^2.0.2",
-    "send": "^0.18.0",
-    "sharp": "^0.32.5"
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
-    "@changesets/cli": "2.26.2",
-    "@sveltejs/adapter-auto": "^2.1.0",
-    "@sveltejs/kit": "^1.24.0",
-    "@sveltejs/package": "^2.2.2",
-    "@types/send": "^0.17.1",
-    "@types/sharp": "^0.32.0",
+    "@changesets/cli": "^2.26.2",
     "prettier": "^3.0.3",
-    "prettier-plugin-svelte": "^3.0.3",
-    "publint": "^0.1.9",
-    "svelte": "^4.2.0",
-    "svelte-adapter-bun": "0.5.0",
-    "svelte-check": "^3.5.1",
-    "tslib": "^2.6.2",
-    "typescript": "^5.2.2",
-    "vite": "^4.4.9"
+		"prettier-plugin-svelte": "^2.10.1",
+    "turbo": "latest",
+    "tsup": "^7.2.0",
+		"typescript": "^5.2.2"
   }
 }
