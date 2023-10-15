@@ -9,7 +9,7 @@ export default defineConfig({
   cleanUrls: true,
 
   sitemap: {
-    hostname: 'https://docs.urami.dev',
+    hostname: 'https://urami.dev',
   },
 
   themeConfig: {
