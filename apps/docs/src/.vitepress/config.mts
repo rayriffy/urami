@@ -27,8 +27,7 @@ export default defineConfig({
         text: 'Getting Started',
         items: [
           { text: 'Introduction', link: '/introduction' },
-          { text: 'Qwik', link: '/guide/qwik' },
-          { text: 'SvelteKit', link: '/guide/svelte-kit' },
+          { text: 'SvelteKit', link: '/guide/sveltekit' },
           { text: 'Solid Start', link: '/guide/solid-start' },
         ],
       },
@@ -44,15 +43,17 @@ export default defineConfig({
         items: [
           { text: 'Overview', link: '/components/overview' },
           { text: 'React', link: '/components/react' },
-          { text: 'Vue', link: '/components/vue' },
-          { text: 'Svelte', link: '/components/svelte' },
           { text: 'Solid', link: '/components/solid' },
-          { text: 'Preact', link: '/components/preact' },
+          { text: 'Svelte', link: '/components/svelte' },
+          { text: 'Vue', link: '/components/vue' },
         ],
       },
       {
         text: 'Utilities',
-        items: [{ text: 'Loader', link: '/utils/loader' }],
+        items: [
+          { text: 'Loader', link: '/utilities/loader' },
+          // { text: 'buildSource', link: '/utilities/buildSource' },
+        ],
       },
     ],
 
