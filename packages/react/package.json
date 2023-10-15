@@ -28,7 +28,23 @@
     "build": "tsup src/index.tsx --format esm --dts --sourcemap",
     "dev": "pnpm run build --watch"
   },
-  "keywords": [],
+  "keywords": [
+    "react",
+    "reactjs",
+    "react-component",
+    "image",
+    "images",
+    "optimize",
+    "optimization",
+    "optimize-images",
+    "plugin",
+    "sharp",
+    "webp",
+    "jpg",
+    "jpeg",
+    "png",
+    "avif"
+  ],
   "peerDependencies": {
     "react": "^18.0.0",
     "react-dom": "^18.0.0"

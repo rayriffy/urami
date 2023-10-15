@@ -37,7 +37,23 @@
     "build": "tsup --format esm --dts --sourcemap",
     "dev": "pnpm run build --watch"
   },
-  "keywords": [],
+  "keywords": [
+    "solid",
+    "solidjs",
+    "react-component",
+    "image",
+    "images",
+    "optimize",
+    "optimization",
+    "optimize-images",
+    "plugin",
+    "sharp",
+    "webp",
+    "jpg",
+    "jpeg",
+    "png",
+    "avif"
+  ],
   "peerDependencies": {
     "solid-js": "^1.7.12"
   },

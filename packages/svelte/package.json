@@ -33,7 +33,21 @@
     "build": "svelte-package -i src -o dist",
     "dev": "pnpm run build --watch"
   },
-  "keywords": [],
+  "keywords": [
+    "svelte",
+    "image",
+    "images",
+    "optimize",
+    "optimization",
+    "optimize-images",
+    "plugin",
+    "sharp",
+    "webp",
+    "jpg",
+    "jpeg",
+    "png",
+    "avif"
+  ],
   "peerDependencies": {
     "svelte": "^4.0.0"
   },

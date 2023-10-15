@@ -28,7 +28,20 @@
     "build": "tsup src/index.ts --format esm --dts --sourcemap",
     "dev": "pnpm run build --watch"
   },
-  "keywords": [],
+  "keywords": [
+    "image",
+    "images",
+    "optimize",
+    "optimization",
+    "optimize-images",
+    "plugin",
+    "sharp",
+    "webp",
+    "jpg",
+    "jpeg",
+    "png",
+    "avif"
+  ],
   "dependencies": {
     "@hapi/accept": "^6.0.2",
     "is-animated": "^2.0.2",
