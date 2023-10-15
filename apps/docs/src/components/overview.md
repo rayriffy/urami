@@ -27,4 +27,4 @@ And you want to render it with a width of `500px` and a quality of `75%`, the op
 
 `/api/_image?url=https://demo.rayriffy.com/tom-scott.jpg&w=500&q=75`
 
-If you want to change endpoint of the URL to be other than `/api/_image`, please refer to [Loader]('/utilities/loader')
+If you want to change endpoint of the URL to be other than `/api/_image`, please refer to [Loader](/utilities/loader)
