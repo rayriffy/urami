@@ -33,7 +33,7 @@ jobs:
       - name: install
         run: pnpm install
       - name: build
-        run: pnpm build
+        run: pnpm build --filter='./packages/*'
       - name: changesets
         id: changesets
         uses: changesets/action@v1

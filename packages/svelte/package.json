@@ -7,6 +7,7 @@
     "email": "contact@rayriffy.com",
     "url": "https://rayriffy.com"
   },
+  "homepage": "https://urami.dev/",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org"

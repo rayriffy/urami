@@ -21,10 +21,11 @@ import { writeImageToFileSystem } from './functions/writeImageToFileSystem.js'
 
 import type { Config } from './@types/Config.js'
 import type { ResponsePayload } from './@types/ResponsePayload.js'
+import type { RequestHandler } from './@types/RequestHandler.js'
 
 export const createRequestHandler =
-  (config: Partial<Config> = {}) =>
-  async (request: Request): Promise<Response> => {
+  (config: Partial<Config> = {}): RequestHandler =>
+  async request => {
     // build general config
     const mergedConfig = {
       ...defaultConfig,

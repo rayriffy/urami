@@ -1,7 +1,7 @@
 {
-  "name": "@urami/utils",
+  "name": "@urami/react",
   "version": "0.0.0",
-  "description": "Utilities function for automatic image optimization",
+  "description": "Automatic image optimization component for React",
   "author": {
     "name": "Phumrapee Limpiancop",
     "email": "contact@rayriffy.com",
@@ -17,20 +17,29 @@
     "url": "git+https://github.com/rayriffy/urami.git"
   },
   "type": "module",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "files": [
     "src",
     "dist"
   ],
   "scripts": {
-    "build": "tsup src/index.ts --format esm --dts --sourcemap",
+    "build": "tsup src/index.tsx --format esm --dts --sourcemap",
     "dev": "pnpm run build --watch"
   },
   "keywords": [],
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "dependencies": {
+    "@urami/utils": "workspace:*"
+  },
   "devDependencies": {
     "@tsconfig/recommended": "^1.0.3",
+    "@types/react": "^18.2.28",
+    "@types/react-dom": "^18.2.13",
     "@urami/types": "workspace:*"
   }
 }

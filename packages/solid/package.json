@@ -1,12 +1,13 @@
 {
   "name": "@urami/solid",
   "version": "0.0.0",
-  "description": "Utilities function for automatic image optimization",
+  "description": "Automatic image optimization component for Solid",
   "author": {
     "name": "Phumrapee Limpiancop",
     "email": "contact@rayriffy.com",
     "url": "https://rayriffy.com"
   },
+  "homepage": "https://urami.dev/",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org"
@@ -19,10 +20,19 @@
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "exports": {
+    "solid": "./dist/index.jsx",
+    "import": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
   "files": [
     "src",
     "dist"
   ],
+  "browser": {},
+  "typesVersions": {},
   "scripts": {
     "build": "tsup --format esm --dts --sourcemap",
     "dev": "pnpm run build --watch"
@@ -39,14 +49,5 @@
     "@urami/types": "workspace:*",
     "solid-js": "^1.7.12",
     "tsup-preset-solid": "^2.1.0"
-  },
-  "browser": {},
-  "exports": {
-    "solid": "./dist/index.jsx",
-    "import": {
-      "types": "./dist/index.d.ts",
-      "default": "./dist/index.js"
-    }
-  },
-  "typesVersions": {}
+  }
 }

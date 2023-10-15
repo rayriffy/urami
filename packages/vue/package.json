@@ -1,7 +1,7 @@
 {
-  "name": "@urami/utils",
+  "name": "@urami/vue",
   "version": "0.0.0",
-  "description": "Utilities function for automatic image optimization",
+  "description": "Automatic image optimization component for Vue",
   "author": {
     "name": "Phumrapee Limpiancop",
     "email": "contact@rayriffy.com",
@@ -17,20 +17,27 @@
     "url": "git+https://github.com/rayriffy/urami.git"
   },
   "type": "module",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
   "files": [
     "src",
     "dist"
   ],
   "scripts": {
-    "build": "tsup src/index.ts --format esm --dts --sourcemap",
-    "dev": "pnpm run build --watch"
+    "build": "vite build"
   },
   "keywords": [],
+  "peerDependencies": {
+    "vue": "^3.0.0"
+  },
+  "dependencies": {
+    "@urami/utils": "workspace:*"
+  },
   "devDependencies": {
     "@tsconfig/recommended": "^1.0.3",
-    "@urami/types": "workspace:*"
+    "@urami/types": "workspace:*",
+    "@vitejs/plugin-vue": "^4.4.0",
+    "vite": "^4.4.11",
+    "vue": "^3.3.4"
   }
 }
