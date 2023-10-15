@@ -1,5 +1,11 @@
 # @urami/solid
 
+## 1.0.1
+
+### Patch Changes
+
+- 710154b: package keywords
+
 ## 1.0.0
 
 ### Major Changes
