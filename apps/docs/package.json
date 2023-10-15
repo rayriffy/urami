@@ -3,8 +3,8 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "dev": "vitepress dev",
-    "build": "vitepress build"
+    "dev": "vitepress dev src --port ${PORT:-5173}",
+    "build": "vitepress build src"
   },
   "devDependencies": {
     "vitepress": "1.0.0-rc.22"

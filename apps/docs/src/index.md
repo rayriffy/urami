@@ -3,16 +3,16 @@
 layout: home
 
 hero:
-  name: "Urami"
-  text: "Automatic image optimization for all!"
-  tagline: My great project tagline
+  name: 'Urami'
+  text: 'Image optimization for all!'
+  tagline: Simpliest way to implement Next.js's automatic image optimization to any framework
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: Get Started
+      link: /introduction
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: View on GitHub
+      link: https://github.com/rayriffy/urami
 
 features:
   - title: Feature A
@@ -22,4 +22,3 @@ features:
   - title: Feature C
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
-

@@ -3,11 +3,14 @@ on:
   push:
     branches:
       - main
-concurrency: ${{ github.workflow }}-${{ github.ref }}
+
+concurrency:
+  group: changeset
+  cancel-in-progress: true
 
 jobs:
-  release:
-    name: Release
+  changeset:
+    name: Changeset
     runs-on: ubuntu-latest
     permissions:
       id-token: write
@@ -25,7 +28,7 @@ jobs:
       - name: node
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 20
           cache: pnpm
       - name: install
         run: pnpm install
