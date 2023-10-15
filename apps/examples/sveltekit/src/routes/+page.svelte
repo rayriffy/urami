@@ -4,13 +4,15 @@
 
 <main class="max-w-xl mx-auto m-4 py-4">
   <section class="">
-    <h1 class="text-gray-900 font-bold text-3xl">svelte-aio</h1>
-    <p class="text-gray-700">Automatic image optimization for SvelteKit.</p>
+    <h1 class="text-gray-900 font-bold text-3xl">Urami</h1>
+    <p class="text-gray-700">
+      Automatic image optimization for all! This is a demo for <b>SvelteKit</b>
+    </p>
   </section>
 
   <section class="py-8">
     <a
-      href="https://github.com/rayriffy/svelte-aio#readme"
+      href="https://urami.dev"
       class="inline-flex items-center rounded-md border border-transparent bg-indigo-100 px-4 py-2 text-sm font-medium text-indigo-700 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
     >
       Documentation
