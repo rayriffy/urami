@@ -16,7 +16,14 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
 
     search: {
-      provider: 'local'
+      provider: 'local',
+    },
+
+    lastUpdated: {},
+
+    editLink: {
+      text: 'Edit this page on GitHub',
+      pattern: 'https://github.com/rayriffy/urami/edit/main/apps/docs/src/:path',
     },
 
     nav: [
