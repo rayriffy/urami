@@ -52,6 +52,7 @@
     "@tsconfig/recommended": "^1.0.3",
     "@urami/types": "workspace:*",
     "@vitejs/plugin-vue": "^4.4.0",
+    "@vue/test-utils": "^2.4.1",
     "vite": "^4.4.11",
     "vue": "^3.3.4"
   }
