@@ -188,9 +188,6 @@ importers:
       '@sveltejs/package':
         specifier: ^2.2.2
         version: 2.2.2(svelte@4.2.1)(typescript@5.2.2)
-      '@sveltejs/vite-plugin-svelte':
-        specifier: ^2.4.6
-        version: 2.4.6(svelte@4.2.1)(vite@4.4.11)
       '@tsconfig/svelte':
         specifier: ^5.0.2
         version: 5.0.2
@@ -200,9 +197,6 @@ importers:
       svelte:
         specifier: ^4.2.0
         version: 4.2.1
-      vite:
-        specifier: ^4.4.11
-        version: 4.4.11(@types/node@18.18.5)
 
   packages/types:
     devDependencies:
