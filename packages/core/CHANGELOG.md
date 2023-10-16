@@ -1,5 +1,11 @@
 # @urami/core
 
+## 1.0.2
+
+### Patch Changes
+
+- 2820684: request can be mocked as partial portion
+
 ## 1.0.1
 
 ### Patch Changes
