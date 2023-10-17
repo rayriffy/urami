@@ -8,8 +8,10 @@ title: Core Overview
 
 It's designed to be used with any frameworks that able to pass input as a [`Request`](https://developer.mozilla.org/en-US/docs/Web/API/Request) interface of Fetch API, and return output as [`Response`](https://developer.mozilla.org/en-US/docs/Web/API/Response) interface of Fetch API.
 
+If your backend framework does not comply with Fetch API `Request` object, just mocking [`url`](https://developer.mozilla.org/en-US/docs/Web/API/Request/url) and [`headers`](https://developer.mozilla.org/en-US/docs/Web/API/Request/headers) at minimum to be able to use Urami Core.
+
 ```ts
-export type RequestHandler = (request: Request) => Promise<Response>
+export type RequestHandler = (request: Pick<Request, 'url' | 'headers'>) => Promise<Response>
 ```
 
 ## Lifecycle
