@@ -2,7 +2,7 @@
 
 [Documentation](https://urami.dev)
 
-Urami, automatic image optimization for all!
+Urami (浦見), automatic image optimization for all!
 
 ## Introduction
 
