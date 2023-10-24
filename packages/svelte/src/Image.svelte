@@ -14,7 +14,7 @@
 
   export let loader: Loader = defaultLoader
 
-  const buildProps = buildSource(loader, src, width, quality)
+  $: buildProps = buildSource(loader, src, width, quality)
 </script>
 
 <!-- svelte-ignore a11y-missing-attribute -->
