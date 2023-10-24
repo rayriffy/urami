@@ -1,5 +1,13 @@
 # @urami/vue
 
+## 1.0.2
+
+### Patch Changes
+
+- 8bd33f1: test suite for vue
+- Updated dependencies [efbabcd]
+  - @urami/utils@1.0.1
+
 ## 1.0.1
 
 ### Patch Changes
