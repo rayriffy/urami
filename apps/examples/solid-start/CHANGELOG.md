@@ -1,5 +1,11 @@
 # @urami/demo-solid
 
+## 0.0.4
+
+### Patch Changes
+
+- @urami/solid@1.0.2
+
 ## 0.0.3
 
 ### Patch Changes

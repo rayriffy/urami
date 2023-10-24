@@ -1,5 +1,13 @@
 # @urami/svelte
 
+## 1.0.2
+
+### Patch Changes
+
+- fec9bc6: add reactivity to svelte image component
+- Updated dependencies [efbabcd]
+  - @urami/utils@1.0.1
+
 ## 1.0.1
 
 ### Patch Changes
