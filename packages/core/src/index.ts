@@ -38,10 +38,22 @@ export const createRequestHandler =
 
     // get variables
     const fullRequestUrl = new URL(request.url)
-    const url = fullRequestUrl.searchParams.get('url') ?? ''
+    let url = fullRequestUrl.searchParams.get('url') ?? ''
     const width = Number(fullRequestUrl.searchParams.get('w') ?? '')
     const quality = Number(fullRequestUrl.searchParams.get('q') ?? '')
 
+    // Check if the URL is valid. If not, try to use the referer header to construct a new URL.
+    try {
+      new URL(url);
+    } catch (e) {
+      // If the referer header is missing, throw an error.
+      const referer = request.headers.get('referer');
+      if (referer === null) {
+        throw error(400, 'missing url');
+      }
+      // Construct a new URL using the referer header and assign it to the url variable.
+      url = new URL(url, referer).toString();
+    }
     // make sure that this url is allowed to optimize
     if (
       mergedConfig.remoteDomains !== undefined &&
