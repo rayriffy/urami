@@ -38,9 +38,23 @@ export const createRequestHandler =
 
     // get variables
     const fullRequestUrl = new URL(request.url)
-    const url = fullRequestUrl.searchParams.get('url') ?? ''
+    let url = fullRequestUrl.searchParams.get('url') ?? ''
     const width = Number(fullRequestUrl.searchParams.get('w') ?? '')
     const quality = Number(fullRequestUrl.searchParams.get('q') ?? '')
+
+    try {
+      // attempt to construct a URL, a relative URL will throw an error
+      url = new URL(url).toString()
+    } catch (e) {
+      // if relative URL does not have a referer header, throw an error
+      const referer = request.headers.get('referer')
+      if (referer === null) {
+        throw error(400, 'missing url')
+      }
+
+      // construct a new URL using the referer header
+      url = new URL(url, referer).toString()
+    }
 
     // make sure that this url is allowed to optimize
     if (
