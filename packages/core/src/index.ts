@@ -42,18 +42,20 @@ export const createRequestHandler =
     const width = Number(fullRequestUrl.searchParams.get('w') ?? '')
     const quality = Number(fullRequestUrl.searchParams.get('q') ?? '')
 
-    // Check if the URL is valid. If not, try to use the referer header to construct a new URL.
     try {
-      new URL(url);
+      // attempt to construct a URL, a relative URL will throw an error
+      url = new URL(url).toString()
     } catch (e) {
-      // If the referer header is missing, throw an error.
-      const referer = request.headers.get('referer');
+      // if relative URL does not have a referer header, throw an error
+      const referer = request.headers.get('referer')
       if (referer === null) {
-        throw error(400, 'missing url');
+        throw error(400, 'missing url')
       }
-      // Construct a new URL using the referer header and assign it to the url variable.
-      url = new URL(url, referer).toString();
+
+      // construct a new URL using the referer header
+      url = new URL(url, referer).toString()
     }
+
     // make sure that this url is allowed to optimize
     if (
       mergedConfig.remoteDomains !== undefined &&
