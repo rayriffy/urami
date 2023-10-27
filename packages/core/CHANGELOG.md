@@ -1,5 +1,11 @@
 # @urami/core
 
+## 1.1.0
+
+### Minor Changes
+
+- 3f0ac3b: allow to get picture by using relative URL (based on referer)
+
 ## 1.0.2
 
 ### Patch Changes
