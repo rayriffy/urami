@@ -5,6 +5,9 @@ export interface Config {
   // lists of allowed domain to use this API (will check via header `Referer`), not specifying anything will allow all domains to use this API
   allowedDomains?: string[]
 
+  // default domain to use if no domain is specified
+  defaultDomain?: string
+
   // directory to temporary store optimized images (default to .svelte-kit/images), paths will be relative to process.cwd()
   storePath: string
 

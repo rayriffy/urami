@@ -42,18 +42,24 @@ export const createRequestHandler =
     const width = Number(fullRequestUrl.searchParams.get('w') ?? '')
     const quality = Number(fullRequestUrl.searchParams.get('q') ?? '')
 
+    // Check if the URL is valid. If not, try to construct a new URL using defaultDomain or referer header.
     try {
       // attempt to construct a URL, a relative URL will throw an error
       url = new URL(url).toString()
     } catch (e) {
-      // if relative URL does not have a referer header, throw an error
-      const referer = request.headers.get('referer')
-      if (referer === null) {
-        throw error(400, 'missing url')
-      }
+      // if default domain is specified, construct a new URL using the default domain
+      if(mergedConfig.defaultDomain) {
+        url = new URL(url, mergedConfig.defaultDomain).toString();
+      } else {
+        // if relative URL does not have a referer header, throw an error
+        const referer = request.headers.get('referer')
+        if (referer === null) {
+          throw error(400, 'missing url')
+        }
 
-      // construct a new URL using the referer header
-      url = new URL(url, referer).toString()
+        // construct a new URL using the referer header
+        url = new URL(url, referer).toString()
+      }
     }
 
     // make sure that this url is allowed to optimize
