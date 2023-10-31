@@ -50,6 +50,12 @@ List of domains that allowed to use the API, this will be checked via header `Re
 
 Only applied when `process.env.NODE_ENV` is set to `production`. Unset this option will allow anywhere to request image from this API.
 
+## defaultDomain
+
+`string | undefined`
+
+Default domain to use when domain is not specified in URL. Defaults to undefined
+
 ## ttl
 
 `number`
