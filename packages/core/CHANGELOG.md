@@ -1,5 +1,11 @@
 # @urami/core
 
+## 1.2.0
+
+### Minor Changes
+
+- 9eab2a6: added `defaultDomain` config as a way to define domain to fetch an image as a relative path
+
 ## 1.1.0
 
 ### Minor Changes
