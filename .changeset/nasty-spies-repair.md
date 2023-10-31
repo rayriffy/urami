@@ -2,4 +2,4 @@
 "@urami/core": minor
 ---
 
-allow to get picture by using relative URL (based on referer)
+added `defaultDomain` config as a way to define domain to fetch an image as a relative path
