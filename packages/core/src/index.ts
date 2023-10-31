@@ -48,18 +48,12 @@ export const createRequestHandler =
       url = new URL(url).toString()
     } catch (e) {
       // if default domain is specified, construct a new URL using the default domain
-      if(mergedConfig.defaultDomain) {
-        url = new URL(url, mergedConfig.defaultDomain).toString();
-      } else {
-        // if relative URL does not have a referer header, throw an error
-        const referer = request.headers.get('referer')
-        if (referer === null) {
-          throw error(400, 'missing url')
-        }
+      const targetDomain =
+        mergedConfig.defaultDomain ?? request.headers.get('referer')
 
-        // construct a new URL using the referer header
-        url = new URL(url, referer).toString()
-      }
+      if (targetDomain === null) throw error(400, 'missing url')
+
+      url = new URL(url, mergedConfig.defaultDomain).toString()
     }
 
     // make sure that this url is allowed to optimize
