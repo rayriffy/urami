@@ -1,5 +1,11 @@
 # @urami/svelte
 
+## 1.1.0
+
+### Minor Changes
+
+- 7da0d76: `on:load` dispatch event is now more accurate than native behavior
+
 ## 1.0.2
 
 ### Patch Changes
