@@ -8,7 +8,7 @@ export interface Config {
   // default domain to use if no domain is specified
   defaultDomain?: string
 
-  // directory to temporary store optimized images (default to .svelte-kit/images), paths will be relative to process.cwd()
+  // directory to temporary store optimized images (default to .urami/images), paths will be relative to process.cwd()
   storePath: string
 
   // cache age before it expires (in miliseconds) (defult to 7 days)
