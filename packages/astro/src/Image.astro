@@ -1,0 +1,36 @@
+---
+import { buildSource } from '@urami/utils'
+
+import type { Loader } from '@urami/types'
+
+export interface Props extends astroHTML.JSX.ImgHTMLAttributes {
+  src: string
+  width: number
+  quality?: number
+}
+
+const {
+  src,
+  width,
+  quality = 75,
+  ...rest
+} = Astro.props
+
+const astroImageLoader: Loader = (src, width, quality) =>
+  `/_urami?${new URLSearchParams({
+    url: src,
+    w: width.toString(),
+    q: quality.toString(),
+  }).toString()}`
+
+
+const builtProps = buildSource(astroImageLoader, src, width, quality)
+---
+
+<img
+  src={builtProps.src}
+  srcset={builtProps.srcSet}
+  decoding="async"
+  loading="lazy"
+  {...rest}
+/>
