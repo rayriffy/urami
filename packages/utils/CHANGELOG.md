@@ -1,5 +1,11 @@
 # @urami/utils
 
+## 1.0.2
+
+### Patch Changes
+
+- 1fa0f6a: change contact email
+
 ## 1.0.1
 
 ### Patch Changes

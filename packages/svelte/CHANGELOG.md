@@ -1,5 +1,13 @@
 # @urami/svelte
 
+## 1.1.1
+
+### Patch Changes
+
+- 1fa0f6a: change contact email
+- Updated dependencies [1fa0f6a]
+  - @urami/utils@1.0.2
+
 ## 1.1.0
 
 ### Minor Changes
