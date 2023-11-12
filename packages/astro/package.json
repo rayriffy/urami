@@ -8,7 +8,7 @@
     "email": "mail@rayriffy.com",
     "url": "https://rayriffy.com"
   },
-  "homepage": "https://urami.dev/",
+  "homepage": "https://urami.dev/guide/astro",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org"
