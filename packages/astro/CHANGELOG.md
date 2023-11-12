@@ -1,5 +1,12 @@
 # @urami/astro
 
+## 1.0.2
+
+### Patch Changes
+
+- Updated dependencies [7dc1c89]
+  - @urami/core@1.2.2
+
 ## 1.0.1
 
 ### Patch Changes

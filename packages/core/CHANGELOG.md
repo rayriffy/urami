@@ -1,5 +1,11 @@
 # @urami/core
 
+## 1.2.2
+
+### Patch Changes
+
+- 7dc1c89: change default path to cache directory
+
 ## 1.2.1
 
 ### Patch Changes
