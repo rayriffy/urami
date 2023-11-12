@@ -39,6 +39,7 @@ export default defineConfig({
         text: 'Getting Started',
         items: [
           { text: 'Introduction', link: '/introduction' },
+          { text: 'Astro', link: '/guide/astro' },
           { text: 'SvelteKit', link: '/guide/sveltekit' },
           { text: 'Solid Start', link: '/guide/solid-start' },
         ],

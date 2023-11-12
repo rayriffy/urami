@@ -1,0 +1,55 @@
+{
+  "name": "@urami/astro",
+  "version": "0.0.0",
+  "description": "Astro integration for automatic image optimization",
+  "type": "module",
+  "author": {
+    "name": "Phumrapee Limpiancop",
+    "email": "mail@rayriffy.com",
+    "url": "https://rayriffy.com"
+  },
+  "homepage": "https://urami.dev/",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rayriffy/urami.git"
+  },
+  "exports": {
+    ".": "./src/index.ts",
+    "./image": "./src/image.ts",
+    "./serverHandler": "./src/serverHandler.ts"
+  },
+  "keywords": [
+    "astro-integration",
+    "astro-component",
+    "image",
+    "images",
+    "optimize",
+    "optimization",
+    "optimize-images",
+    "plugin",
+    "sharp",
+    "webp",
+    "jpg",
+    "jpeg",
+    "png"
+  ],
+  "files": [
+    "src"
+  ],
+  "peerDependencies": {
+    "astro": "^3.0.0"
+  },
+  "dependencies": {
+    "@urami/core": "workspace:*",
+    "@urami/utils": "workspace:*",
+    "sharp": "^0.32.5"
+  },
+  "devDependencies": {
+    "@urami/types": "workspace:*",
+    "astro": "^3.5.0"
+  }
+}
