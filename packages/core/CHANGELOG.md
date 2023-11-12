@@ -1,5 +1,11 @@
 # @urami/core
 
+## 1.2.1
+
+### Patch Changes
+
+- 1fa0f6a: change contact email
+
 ## 1.2.0
 
 ### Minor Changes
