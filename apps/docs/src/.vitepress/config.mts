@@ -8,12 +8,17 @@ export default defineConfig({
   lang: 'en-US',
   cleanUrls: true,
 
+  head: [
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
+  ],
+
   sitemap: {
     hostname: 'https://urami.dev',
   },
 
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
+    logo: '/favicon.svg',
 
     search: {
       provider: 'local',
@@ -23,7 +28,8 @@ export default defineConfig({
 
     editLink: {
       text: 'Edit this page on GitHub',
-      pattern: 'https://github.com/rayriffy/urami/edit/main/apps/docs/src/:path',
+      pattern:
+        'https://github.com/rayriffy/urami/edit/main/apps/docs/src/:path',
     },
 
     nav: [
