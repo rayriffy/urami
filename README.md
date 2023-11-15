@@ -23,6 +23,7 @@ The documentation is available at [urami.dev](https://urami.dev)
 <table>
   <tbody>
     <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/epavanello"><img src="https://avatars.githubusercontent.com/u/47756116?v=4?s=100" width="100px;" alt="Emanuele Pavanello"/><br /><sub><b>Emanuele Pavanello</b></sub></a><br /><a href="#code-epavanello" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://dan.onl"><img src="https://avatars.githubusercontent.com/u/27079662?v=4?s=100" width="100px;" alt="Daniel Huang"/><br /><sub><b>Daniel Huang</b></sub></a><br /><a href="#code-cubedhuang" title="Code">💻</a></td>
     </tr>
   </tbody>
