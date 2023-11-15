@@ -20,6 +20,13 @@ The documentation is available at [urami.dev](https://urami.dev)
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
+<table>
+  <tbody>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://dan.onl"><img src="https://avatars.githubusercontent.com/u/27079662?v=4?s=100" width="100px;" alt="Daniel Huang"/><br /><sub><b>Daniel Huang</b></sub></a><br /><a href="#code-cubedhuang" title="Code">💻</a></td>
+    </tr>
+  </tbody>
+</table>
 
 <!-- markdownlint-restore -->
 <!-- prettier-ignore-end -->
