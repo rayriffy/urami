@@ -20,6 +20,13 @@ The documentation is available at [urami.dev](https://urami.dev)
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
+<table>
+  <tbody>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="http://leomotors.me"><img src="https://avatars.githubusercontent.com/u/59821765?v=4?s=100" width="100px;" alt="Nutthapat Pongtanyavichai"/><br /><sub><b>Nutthapat Pongtanyavichai</b></sub></a><br /><a href="#code-Leomotors" title="Code">💻</a></td>
+    </tr>
+  </tbody>
+</table>
 
 <!-- markdownlint-restore -->
 <!-- prettier-ignore-end -->
