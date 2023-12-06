@@ -1,5 +1,11 @@
 # @urami/core
 
+## 1.2.3
+
+### Patch Changes
+
+- 493ffbd: `sharp` has been correctly defined as peer dependency
+
 ## 1.2.2
 
 ### Patch Changes

@@ -1,5 +1,12 @@
 # @urami/demo-sveltekit
 
+## 0.0.11
+
+### Patch Changes
+
+- Updated dependencies [493ffbd]
+  - @urami/core@1.2.3
+
 ## 0.0.10
 
 ### Patch Changes
