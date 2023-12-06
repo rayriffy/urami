@@ -42,14 +42,17 @@
     "png",
     "avif"
   ],
+  "peerDependencies": {
+    "sharp": "^0.32.5"
+  },
   "dependencies": {
     "@hapi/accept": "^6.0.2",
     "is-animated": "^2.0.2",
-    "send": "^0.18.0",
-    "sharp": "^0.32.5"
+    "send": "^0.18.0"
   },
   "devDependencies": {
-    "@tsconfig/node20": "^20.1.2",
-    "@types/send": "^0.17.1"
+    "@tsconfig/node20": "20.1.2",
+    "@types/send": "0.17.4",
+    "sharp": "^0.32.5"
   }
 }
