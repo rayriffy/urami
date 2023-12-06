@@ -1,5 +1,12 @@
 # @urami/demo-solid
 
+## 0.0.9
+
+### Patch Changes
+
+- Updated dependencies [493ffbd]
+  - @urami/core@1.2.3
+
 ## 0.0.8
 
 ### Patch Changes
