@@ -2,4 +2,4 @@
 "@urami/react": patch
 ---
 
-react forward ref
+update image component to foward ref
