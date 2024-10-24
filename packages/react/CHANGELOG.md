@@ -1,5 +1,11 @@
 # @urami/react
 
+## 1.0.4
+
+### Patch Changes
+
+- 2f9c97b: update image component to foward ref
+
 ## 1.0.3
 
 ### Patch Changes
