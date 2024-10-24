@@ -1,6 +1,6 @@
 import { defaultLoader, buildSource } from '@urami/utils'
 
-import type { FunctionComponent, ImgHTMLAttributes } from 'react'
+import { forwardRef, type ImgHTMLAttributes } from 'react'
 import type { Loader } from '@urami/types'
 
 export interface ImageProps extends ImgHTMLAttributes<HTMLImageElement> {
@@ -10,17 +10,18 @@ export interface ImageProps extends ImgHTMLAttributes<HTMLImageElement> {
   loader?: Loader
 }
 
-const Image: FunctionComponent<ImageProps> = ({
+const Image = forwardRef<HTMLImageElement, ImageProps>(({
   src,
   width,
   quality = 75,
   loader = defaultLoader,
   ...rest
-}) => {
+},ref) => {
   const builtProps = buildSource(loader, src, width, quality)
 
   return (
     <img
+      ref={ref}
       src={builtProps.src}
       srcSet={builtProps.srcSet}
       decoding="async"
@@ -28,6 +29,6 @@ const Image: FunctionComponent<ImageProps> = ({
       {...rest}
     />
   )
-}
+})
 
 export default Image
