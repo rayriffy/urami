@@ -1,5 +1,11 @@
 # @urami/core
 
+## 1.3.0
+
+### Minor Changes
+
+- 26c194d: dependencies bump
+
 ## 1.2.3
 
 ### Patch Changes
