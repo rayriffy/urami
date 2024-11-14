@@ -5,5 +5,5 @@ import {
 } from "solid-start/entry-server";
 
 export default createHandler(
-  renderAsync((event) => <StartServer event={event} />)
+  renderAsync((event) => <StartServer event={event} />),
 );

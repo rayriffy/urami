@@ -1,1 +1,1 @@
-export const cacheVersion = 1
+export const cacheVersion = 1;

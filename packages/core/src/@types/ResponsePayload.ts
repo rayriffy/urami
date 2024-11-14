@@ -1,6 +1,6 @@
 export interface ResponsePayload {
-  buffer: Buffer
-  contentType: string | null
-  maxAge: number
-  etag: string
+  buffer: Buffer;
+  contentType: string | null;
+  maxAge: number;
+  etag: string;
 }

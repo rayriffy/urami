@@ -8,7 +8,7 @@ Optimized image component for [Vue](https://vuejs.org/).
 
 ```vue
 <script>
-  import Image from '@urami/vue'
+import Image from "@urami/vue";
 </script>
 
 <template>
@@ -24,10 +24,10 @@ Optimized image component for [Vue](https://vuejs.org/).
 
 ## Props
 
-| Name      | Type     | Default                                                                                            | Required | Description                                                          |
-| --------- | -------- | -------------------------------------------------------------------------------------------------- | -------- | -------------------------------------------------------------------- |
-| `src`     | `string` | -                                                                                                  | ✅       | Source of the image                                                  |
-| `width`   | `number` | -                                                                                                  | ✅       | Width of the image                                                   |
-| `height`  | `number` | -                                                                                                  | ❌       | Height of the image (Specify this will results in less layout shift) |
-| `quality` | `number` | `75`                                                                                               | ❌       | Quality of the image                                                 |
-| `loader`  | `fn`     | [`defaultLoader`](https://github.com/rayriffy/urami/blob/main/packages/utils/src/defaultLoader.ts) | ❌       | Loader function, please refer to [Loader](https://urami.dev/utilities/loader)         |
+| Name      | Type     | Default                                                                                            | Required | Description                                                                   |
+| --------- | -------- | -------------------------------------------------------------------------------------------------- | -------- | ----------------------------------------------------------------------------- |
+| `src`     | `string` | -                                                                                                  | ✅       | Source of the image                                                           |
+| `width`   | `number` | -                                                                                                  | ✅       | Width of the image                                                            |
+| `height`  | `number` | -                                                                                                  | ❌       | Height of the image (Specify this will results in less layout shift)          |
+| `quality` | `number` | `75`                                                                                               | ❌       | Quality of the image                                                          |
+| `loader`  | `fn`     | [`defaultLoader`](https://github.com/rayriffy/urami/blob/main/packages/utils/src/defaultLoader.ts) | ❌       | Loader function, please refer to [Loader](https://urami.dev/utilities/loader) |

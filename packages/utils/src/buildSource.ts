@@ -1,16 +1,16 @@
-import type { Loader } from '@urami/types'
+import type { Loader } from "@urami/types";
 
 // all possible sizes from devices width to regular placeholders
 const allSizes = [
   16, 32, 48, 64, 96, 128, 256, 384, 640, 750, 828, 1080, 1200, 1920, 2048,
   3840,
-]
+];
 
 export const buildSource = (
   loader: Loader,
   src: string,
   width: number,
-  quality: number
+  quality: number,
 ) => {
   // generate all widths to be used for optimizations
   const widths = [
@@ -24,15 +24,15 @@ export const buildSource = (
       // > something like a magnifying glass.
       // https://blog.twitter.com/engineering/en_us/topics/infrastructure/2019/capping-image-fidelity-on-ultra-high-resolution-devices.html
       [width, width * 2 /*, width * 3*/].map(
-        w => allSizes.find(p => p >= w) || allSizes[allSizes.length - 1]
-      )
+        (w) => allSizes.find((p) => p >= w) || allSizes[allSizes.length - 1],
+      ),
     ),
-  ]
+  ];
 
   return {
     src: loader(src, widths[widths.length - 1], quality),
     srcSet: widths
       .map((o, i) => `${loader(src, o, quality)} ${i + 1}x`)
-      .join(', '),
-  }
-}
+      .join(", "),
+  };
+};

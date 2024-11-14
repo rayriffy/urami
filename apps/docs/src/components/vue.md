@@ -28,7 +28,7 @@ $ bun add @urami/vue
 
 ```vue
 <script>
-  import Image from '@urami/vue'
+import Image from "@urami/vue";
 </script>
 
 <template>

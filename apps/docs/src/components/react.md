@@ -27,7 +27,7 @@ $ bun add @urami/react
 ## Usage
 
 ```tsx
-import Image from '@urami/react'
+import Image from "@urami/react";
 
 const Component = () => {
   return (
@@ -38,8 +38,8 @@ const Component = () => {
       alt="Tom Scott"
       className="rounded-xl shadow-md"
     />
-  )
-}
+  );
+};
 ```
 
 ## Props

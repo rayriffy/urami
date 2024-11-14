@@ -1,3 +1,3 @@
-import { SVG } from './mimeTypes.js'
+import { SVG } from "./mimeTypes.js";
 
-export const vectorTypes = [SVG]
+export const vectorTypes = [SVG];

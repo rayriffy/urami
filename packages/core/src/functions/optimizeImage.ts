@@ -1,51 +1,51 @@
-import sharp from 'sharp'
+import sharp from "sharp";
 
-import { AVIF, JPEG, PNG, WEBP } from '../constants/mimeTypes.js'
+import { AVIF, JPEG, PNG, WEBP } from "../constants/mimeTypes.js";
 
 export const optimizeImage = async (
   buffer: Buffer,
   contentType: string,
   quality: number,
   width: number,
-  height?: number
+  height?: number,
 ) => {
   try {
     // Begin sharp transformation logic
-    const transformer = sharp(buffer)
+    const transformer = sharp(buffer);
 
-    transformer.rotate()
+    transformer.rotate();
 
     if (height) {
-      transformer.resize(width, height)
+      transformer.resize(width, height);
     } else {
-      const { width: metaWidth } = await transformer.metadata()
+      const { width: metaWidth } = await transformer.metadata();
 
       if (metaWidth && metaWidth > width) {
-        transformer.resize(width)
+        transformer.resize(width);
       }
     }
 
     if (contentType === AVIF) {
       if (transformer.avif) {
-        const avifQuality = quality - 15
+        const avifQuality = quality - 15;
         transformer.avif({
           quality: Math.max(avifQuality, 0),
-          chromaSubsampling: '4:2:0', // same as webp
-        })
+          chromaSubsampling: "4:2:0", // same as webp
+        });
       } else {
-        transformer.webp({ quality })
+        transformer.webp({ quality });
       }
     } else if (contentType === WEBP) {
-      transformer.webp({ quality })
+      transformer.webp({ quality });
     } else if (contentType === PNG) {
-      transformer.png({ quality })
+      transformer.png({ quality });
     } else if (contentType === JPEG) {
-      transformer.jpeg({ quality })
+      transformer.jpeg({ quality });
     }
 
-    return transformer.toBuffer()
+    return transformer.toBuffer();
   } catch (_) {
-    console.log(_)
-    return null
+    console.log(_);
+    return null;
   }
-}
+};

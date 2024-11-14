@@ -47,18 +47,17 @@ $ yarn add @urami/astro
 Then, apply integration to `astro.config.mjs`. It's important to have `output: 'server'` in order to use Urami.
 
 ```js [astro.config.mjs]
-import { defineConfig } from 'astro/config'
+import { defineConfig } from "astro/config";
 
-import urami from '@urami/astro' // [!code ++]
+import urami from "@urami/astro"; // [!code ++]
 
 // https://astro.build/config
 export default defineConfig({
-  output: 'server', // [!code ++]
+  output: "server", // [!code ++]
   integrations: [
     urami(), // [!code ++]
   ],
-})
-
+});
 ```
 
 ## Image component

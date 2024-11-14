@@ -37,25 +37,25 @@ At directory `src/routes/api/_image.ts`, which is a server endpoint for Urami. T
 ::: code-group
 
 ```js [_image.js]
-import { createRequestHandler } from '@urami/core'
+import { createRequestHandler } from "@urami/core";
 
 const handler = createRequestHandler({
-  remoteDomains: ['demo.rayriffy.com'],
-})
+  remoteDomains: ["demo.rayriffy.com"],
+});
 
-export const GET = ({ request }) => handler(request)
+export const GET = ({ request }) => handler(request);
 ```
 
 ```ts [_image.ts]
-import { createRequestHandler } from '@urami/core'
+import { createRequestHandler } from "@urami/core";
 
-import type { APIEvent } from 'solid-start/api'
+import type { APIEvent } from "solid-start/api";
 
 const handler = createRequestHandler({
-  remoteDomains: ['demo.rayriffy.com'],
-})
+  remoteDomains: ["demo.rayriffy.com"],
+});
 
-export const GET = ({ request }: APIEvent) => handler(request)
+export const GET = ({ request }: APIEvent) => handler(request);
 ```
 
 :::
@@ -68,7 +68,7 @@ Import `Image` component from `@urami/solid` and use it like `next/image`.
 
 ```tsx [index.tsx]
 // index.jsx
-import Image from '@urami/solid'
+import Image from "@urami/solid";
 
 export default function Page() {
   return (
@@ -79,7 +79,7 @@ export default function Page() {
       alt="Tom Scott"
       class="rounded-xl shadow-md"
     />
-  )
+  );
 }
 ```
 

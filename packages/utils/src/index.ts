@@ -1,2 +1,2 @@
-export { buildSource } from './buildSource'
-export { defaultLoader } from './defaultLoader'
+export { buildSource } from "./buildSource";
+export { defaultLoader } from "./defaultLoader";

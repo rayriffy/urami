@@ -1,17 +1,17 @@
-import type { AstroIntegration } from 'astro'
+import type { AstroIntegration } from "astro";
 
 const integration = (): AstroIntegration => {
   return {
-    name: '@urami/astro',
+    name: "@urami/astro",
     hooks: {
-      'astro:config:setup': ({ injectRoute }) => {
+      "astro:config:setup": ({ injectRoute }) => {
         injectRoute({
-          pattern: '/_urami',
-          entryPoint: '@urami/astro/serverHandler',
-        })
+          pattern: "/_urami",
+          entryPoint: "@urami/astro/serverHandler",
+        });
       },
     },
-  }
-}
+  };
+};
 
-export default integration
+export default integration;

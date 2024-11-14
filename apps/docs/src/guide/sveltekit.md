@@ -37,25 +37,25 @@ Create a file `routes/api/_image/+server.ts`, which is a server endpoint for Ura
 ::: code-group
 
 ```js [+server.js]
-import { createRequestHandler } from '@urami/core'
+import { createRequestHandler } from "@urami/core";
 
 const handler = createRequestHandler({
-  remoteDomains: ['demo.rayriffy.com'],
-})
+  remoteDomains: ["demo.rayriffy.com"],
+});
 
-export const GET = event => handler(event.request)
+export const GET = (event) => handler(event.request);
 ```
 
 ```ts [+server.ts]
-import { createRequestHandler } from '@urami/core'
+import { createRequestHandler } from "@urami/core";
 
-import type { RequestHandler } from '@sveltejs/kit'
+import type { RequestHandler } from "@sveltejs/kit";
 
 const handler = createRequestHandler({
-  remoteDomains: ['demo.rayriffy.com'],
-})
+  remoteDomains: ["demo.rayriffy.com"],
+});
 
-export const GET: RequestHandler = event => handler(event.request)
+export const GET: RequestHandler = (event) => handler(event.request);
 ```
 
 :::

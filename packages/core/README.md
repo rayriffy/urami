@@ -9,11 +9,11 @@ A high-order function to ceate a request handler. Options can be specifed, pleas
 ```ts
 const handler = createRequestHandler({
   // configuration
-})
+});
 ```
 
 The handler itself is a function that accepts a `Request` object and returns a `Response` object.
 
 ```ts
-export type RequestHandler = (request: Request) => Promise<Response>
+export type RequestHandler = (request: Request) => Promise<Response>;
 ```

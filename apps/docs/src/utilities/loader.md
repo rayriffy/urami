@@ -8,7 +8,7 @@ However, there're many cases that you want to use your own loader function. For 
 - You want to use your own image optimization service
 
 ```ts
-export type Loader = (src: string, width: number, quality: number) => string
+export type Loader = (src: string, width: number, quality: number) => string;
 ```
 
 The function accepts 3 parameters
@@ -24,19 +24,19 @@ As a result, the function should return the optimized image source.
 Define your own loader function
 
 ```ts
-import type { Loader } from '@urami/types'
+import type { Loader } from "@urami/types";
 
 export const customLoader: Loader = (src, width, quality) => {
   const params = new URLSearchParams({
     url: src,
     w: width.toString(),
     q: quality.toString(),
-  }).toString()
+  }).toString();
 
-  if (src.startsWith('https://demo.rayriffy.com'))
-    return `https://api.example.com/image?${params}`
-  else return `https://remote.foo.bar/image?${params}`
-}
+  if (src.startsWith("https://demo.rayriffy.com"))
+    return `https://api.example.com/image?${params}`;
+  else return `https://remote.foo.bar/image?${params}`;
+};
 ```
 
 Then pass it to the component

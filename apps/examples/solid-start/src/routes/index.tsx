@@ -1,4 +1,4 @@
-import Image from '@urami/solid'
+import Image from "@urami/solid";
 
 export default function Home() {
   return (
@@ -6,7 +6,7 @@ export default function Home() {
       <section class="">
         <h1 class="text-gray-900 font-bold text-3xl">Urami</h1>
         <p class="text-gray-700">
-          Automatic image optimization for all! This is a demo for{' '}
+          Automatic image optimization for all! This is a demo for{" "}
           <b>Solid Start</b>
         </p>
       </section>
@@ -29,5 +29,5 @@ export default function Home() {
         class="rounded-xl shadow-md"
       />
     </main>
-  )
+  );
 }

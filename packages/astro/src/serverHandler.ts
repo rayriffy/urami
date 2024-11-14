@@ -1,7 +1,7 @@
-import { createRequestHandler } from '@urami/core'
+import { createRequestHandler } from "@urami/core";
 
-import type { APIRoute } from 'astro'
+import type { APIRoute } from "astro";
 
-const handler = createRequestHandler()
+const handler = createRequestHandler();
 
-export const GET: APIRoute = ctx => handler(ctx.request)
+export const GET: APIRoute = (ctx) => handler(ctx.request);

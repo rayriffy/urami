@@ -35,9 +35,9 @@ import Image from '@urami/astro/image'
 
 ## Props
 
-| Name      | Type     | Default                                                                                            | Required | Description                                                          |
-| --------- | -------- | -------------------------------------------------------------------------------------------------- | -------- | -------------------------------------------------------------------- |
-| `src`     | `string` | -                                                                                                  | ✅       | Source of the image                                                  |
-| `width`   | `number` | -                                                                                                  | ✅       | Width of the image                                                   |
-| `height`  | `number` | -                                                                                                  | ❌       | Height of the image (Specify this will results in less layout shift) |
-| `quality` | `number` | `75`                                                                                               | ❌       | Quality of the image                                                 |
+| Name      | Type     | Default | Required | Description                                                          |
+| --------- | -------- | ------- | -------- | -------------------------------------------------------------------- |
+| `src`     | `string` | -       | ✅       | Source of the image                                                  |
+| `width`   | `number` | -       | ✅       | Width of the image                                                   |
+| `height`  | `number` | -       | ❌       | Height of the image (Specify this will results in less layout shift) |
+| `quality` | `number` | `75`    | ❌       | Quality of the image                                                 |

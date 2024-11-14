@@ -6,8 +6,8 @@ title: Urami
 titleTemplate: Image optimization for all!
 
 hero:
-  name: 'Urami'
-  text: 'Image optimization for all!'
+  name: "Urami"
+  text: "Image optimization for all!"
   tagline: Simpliest way to implement Next.js's automatic image optimization to any JS framework
   actions:
     - theme: brand

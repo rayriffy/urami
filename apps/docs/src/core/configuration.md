@@ -11,15 +11,15 @@ All parameters are optional!
 :::
 
 ```js
-import { createRequestHandler } from '@urami/core'
+import { createRequestHandler } from "@urami/core";
 
 const handler = createRequestHandler({
   avif: false,
-  remoteDomains: ['demo.rayriffy.com'],
-  allowedDomains: ['svelte-aio.vercel.app'],
+  remoteDomains: ["demo.rayriffy.com"],
+  allowedDomains: ["svelte-aio.vercel.app"],
   ttl: 1000 * 60 * 60 * 24 * 7,
-  storePath: '.svelte-kit/images',
-})
+  storePath: ".svelte-kit/images",
+});
 ```
 
 ## avif
