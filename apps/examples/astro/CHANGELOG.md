@@ -1,5 +1,16 @@
 # @urami/demo-astro
 
+## 0.1.0
+
+### Minor Changes
+
+- 26c194d: dependencies bump
+
+### Patch Changes
+
+- Updated dependencies [26c194d]
+  - @urami/astro@1.1.0
+
 ## 0.0.5
 
 ### Patch Changes

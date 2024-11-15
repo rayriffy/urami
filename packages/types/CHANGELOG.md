@@ -1,5 +1,11 @@
 # @urami/types
 
+## 1.1.0
+
+### Minor Changes
+
+- 26c194d: dependencies bump
+
 ## 1.0.1
 
 ### Patch Changes

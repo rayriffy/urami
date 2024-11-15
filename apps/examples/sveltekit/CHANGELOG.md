@@ -1,5 +1,17 @@
 # @urami/demo-sveltekit
 
+## 0.1.0
+
+### Minor Changes
+
+- 26c194d: dependencies bump
+
+### Patch Changes
+
+- Updated dependencies [26c194d]
+  - @urami/svelte@1.2.0
+  - @urami/core@1.3.0
+
 ## 0.0.11
 
 ### Patch Changes

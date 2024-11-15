@@ -1,6 +1,6 @@
 {
   "name": "@urami/docs",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "vitepress dev src --port ${PORT:-5173}",

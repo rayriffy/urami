@@ -1,5 +1,17 @@
 # @urami/demo-solid
 
+## 0.1.0
+
+### Minor Changes
+
+- 26c194d: dependencies bump
+
+### Patch Changes
+
+- Updated dependencies [26c194d]
+  - @urami/solid@1.1.0
+  - @urami/core@1.3.0
+
 ## 0.0.9
 
 ### Patch Changes

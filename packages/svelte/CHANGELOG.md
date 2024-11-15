@@ -1,5 +1,16 @@
 # @urami/svelte
 
+## 1.2.0
+
+### Minor Changes
+
+- 26c194d: dependencies bump
+
+### Patch Changes
+
+- Updated dependencies [26c194d]
+  - @urami/utils@1.1.0
+
 ## 1.1.1
 
 ### Patch Changes
