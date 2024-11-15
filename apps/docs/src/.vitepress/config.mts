@@ -65,6 +65,7 @@ export default defineConfig({
           { text: 'Solid', link: '/components/solid' },
           { text: 'Svelte', link: '/components/svelte' },
           { text: 'Vue', link: '/components/vue' },
+          { text: 'Nuxt', link: '/components/nuxt' },
         ],
       },
       {
