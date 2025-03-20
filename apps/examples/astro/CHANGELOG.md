@@ -1,5 +1,11 @@
 # @urami/demo-astro
 
+## 0.1.1
+
+### Patch Changes
+
+- @urami/astro@1.1.1
+
 ## 0.1.0
 
 ### Minor Changes
