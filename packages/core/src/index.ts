@@ -96,6 +96,20 @@ export const createRequestHandler =
       );
 
       if (cacheResponse !== null) {
+        // Check if client has a matching ETag in If-None-Match header
+        const ifNoneMatch = request.headers.get("If-None-Match");
+        if (ifNoneMatch === cacheResponse.etag) {
+          // Return 304 Not Modified if ETags match
+          return new Response(null, {
+            status: 304,
+            headers: {
+              Vary: "Accept",
+              "Cache-Control": `public, max-age=${Math.floor(cacheResponse.maxAge / 1000)}, must-revalidate`,
+              ETag: cacheResponse.etag,
+              "X-SvelteAIO-Cache": "HIT",
+            },
+          });
+        }
         return sendResponse(cacheResponse, "HIT");
       }
 
@@ -113,12 +127,30 @@ export const createRequestHandler =
       const animated =
         animateableTypes.includes(upstreamType) && isAnimated(upstreamBuffer);
       if (vector || animated) {
+        const etag = getHash([upstreamBuffer]);
+        const ifNoneMatch = request.headers.get("If-None-Match");
+        
+        // Check if client has a matching ETag in If-None-Match header
+        if (ifNoneMatch === etag) {
+          // Return 304 Not Modified if ETags match
+          return new Response(null, {
+            status: 304,
+            headers: {
+              Vary: "Accept",
+              "Cache-Control": "public, max-age=0, must-revalidate",
+              ETag: etag,
+              "X-SvelteAIO-Cache": "MISS",
+              "X-Urami-Optimization": "animate-ignore",
+            },
+          });
+        }
+        
         return sendResponse(
           {
             buffer: upstreamBuffer,
             contentType: upstreamType,
             maxAge: 0,
-            etag: getHash([upstreamBuffer]),
+            etag,
           },
           "MISS",
           {
@@ -157,6 +189,21 @@ export const createRequestHandler =
           maxAge: Math.max(maxAge, mergedConfig.ttl),
           etag: getHash([optimizedBuffer]),
         };
+
+        // Check if client has a matching ETag in If-None-Match header
+        const ifNoneMatch = request.headers.get("If-None-Match");
+        if (ifNoneMatch === payload.etag) {
+          // Return 304 Not Modified if ETags match
+          return new Response(null, {
+            status: 304,
+            headers: {
+              Vary: "Accept",
+              "Cache-Control": `public, max-age=${Math.floor(payload.maxAge / 1000)}, must-revalidate`,
+              ETag: payload.etag,
+              "X-SvelteAIO-Cache": "MISS",
+            },
+          });
+        }
 
         // write file to local storage, not await since this is not prioritised
         writeImageToFileSystem(
