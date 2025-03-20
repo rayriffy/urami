@@ -1,5 +1,12 @@
 # @urami/core
 
+## 1.4.0
+
+### Minor Changes
+
+- 26209ae: implement client cache to send code 304 if data already present in client browser cache
+- 9fb1762: rewrite logics for performance improvements, and memory cache management
+
 ## 1.3.0
 
 ### Minor Changes
