@@ -23,8 +23,6 @@ jobs:
         uses: actions/checkout@v4
       - name: pnpm
         uses: pnpm/action-setup@v4
-        with:
-          version: 10
       - name: node
         uses: actions/setup-node@v4
         with:
