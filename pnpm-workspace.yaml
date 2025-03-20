@@ -1,4 +1,7 @@
 packages:
-  - "apps/*"
-  - "apps/examples/*"
-  - "packages/*"
+  - apps/*
+  - apps/examples/*
+  - packages/*
+onlyBuiltDependencies:
+  - svelte-preprocess
+  - vue-demi

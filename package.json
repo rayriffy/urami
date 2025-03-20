@@ -1,7 +1,7 @@
 {
   "name": "urami",
-  "packageManager": "pnpm@9.13.0+sha512.beb9e2a803db336c10c9af682b58ad7181ca0fbd0d4119f2b33d5f2582e96d6c0d93c85b23869295b765170fbdaa92890c0da6ada457415039769edf3c959efe",
   "private": true,
+  "packageManager": "pnpm@10.5.2",
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev --filter=@urami/docs",
@@ -9,14 +9,14 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
-    "@changesets/cli": "^2.26.2",
+    "@changesets/cli": "^2.28.1",
     "@vitest/coverage-v8": "^0.34.6",
     "happy-dom": "^12.9.1",
-    "prettier": "^3.0.3",
-    "prettier-plugin-svelte": "^2.10.1",
-    "tsup": "^8.3.5",
-    "turbo": "latest",
-    "typescript": "^5.2.2",
+    "prettier": "^3.5.3",
+    "prettier-plugin-svelte": "^3.3.3",
+    "tsup": "^8.4.0",
+    "turbo": "^2.4.4",
+    "typescript": "^5.8.2",
     "vitest": "^0.34.6"
   }
 }
