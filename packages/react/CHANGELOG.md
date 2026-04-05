@@ -1,5 +1,17 @@
 # @urami/react
 
+## 1.2.0
+
+### Minor Changes
+
+- 4db84e0: fix issues with layout shift on image component
+
+### Patch Changes
+
+- 1cc9d46: move type to be dependencies
+- Updated dependencies [1cc9d46]
+  - @urami/utils@1.1.1
+
 ## 1.1.0
 
 ### Minor Changes

@@ -1,5 +1,11 @@
 # @urami/utils
 
+## 1.1.1
+
+### Patch Changes
+
+- 1cc9d46: move type to be dependencies
+
 ## 1.1.0
 
 ### Minor Changes

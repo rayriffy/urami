@@ -1,5 +1,11 @@
 # @urami/core
 
+## 1.4.1
+
+### Patch Changes
+
+- 1cc9d46: move type to be dependencies
+
 ## 1.4.0
 
 ### Minor Changes

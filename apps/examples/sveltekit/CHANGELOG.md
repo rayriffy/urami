@@ -1,5 +1,14 @@
 # @urami/demo-sveltekit
 
+## 0.1.2
+
+### Patch Changes
+
+- 1cc9d46: move type to be dependencies
+- Updated dependencies [1cc9d46]
+  - @urami/svelte@1.2.1
+  - @urami/core@1.4.1
+
 ## 0.1.1
 
 ### Patch Changes
