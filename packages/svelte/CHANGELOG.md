@@ -1,5 +1,13 @@
 # @urami/svelte
 
+## 1.2.1
+
+### Patch Changes
+
+- 1cc9d46: move type to be dependencies
+- Updated dependencies [1cc9d46]
+  - @urami/utils@1.1.1
+
 ## 1.2.0
 
 ### Minor Changes

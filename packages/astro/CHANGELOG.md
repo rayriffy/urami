@@ -1,5 +1,14 @@
 # @urami/astro
 
+## 1.1.2
+
+### Patch Changes
+
+- 1cc9d46: move type to be dependencies
+- Updated dependencies [1cc9d46]
+  - @urami/utils@1.1.1
+  - @urami/core@1.4.1
+
 ## 1.1.1
 
 ### Patch Changes
