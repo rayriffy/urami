@@ -22,6 +22,8 @@ const Image = forwardRef<HTMLImageElement, ImageProps>(
         decoding="async"
         loading="lazy"
         {...rest}
+        width={width}
+        height={rest.height}
       />
     );
   },
