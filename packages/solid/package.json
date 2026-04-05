@@ -58,11 +58,11 @@
     "solid-js": "^1.7.12"
   },
   "dependencies": {
-    "@urami/utils": "workspace:*"
+    "@urami/utils": "workspace:*",
+    "@urami/types": "workspace:*"
   },
   "devDependencies": {
     "@tsconfig/recommended": "^1.0.3",
-    "@urami/types": "workspace:*",
     "solid-js": "^1.7.12",
     "tsup-preset-solid": "^2.1.0"
   }

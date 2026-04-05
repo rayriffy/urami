@@ -46,11 +46,11 @@
     "vue": "^3.0.0"
   },
   "dependencies": {
-    "@urami/utils": "workspace:*"
+    "@urami/utils": "workspace:*",
+    "@urami/types": "workspace:*"
   },
   "devDependencies": {
     "@tsconfig/recommended": "^1.0.3",
-    "@urami/types": "workspace:*",
     "@vitejs/plugin-vue": "^4.4.0",
     "@vue/test-utils": "^2.4.1",
     "vite": "^4.4.11",

@@ -52,12 +52,12 @@
     "svelte": "^4.0.0"
   },
   "dependencies": {
-    "@urami/utils": "workspace:*"
+    "@urami/utils": "workspace:*",
+    "@urami/types": "workspace:*"
   },
   "devDependencies": {
     "@sveltejs/package": "^2.2.2",
     "@tsconfig/svelte": "^5.0.2",
-    "@urami/types": "workspace:*",
     "svelte": "^4.2.0"
   }
 }

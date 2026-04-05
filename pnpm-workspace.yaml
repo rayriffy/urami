@@ -3,5 +3,9 @@ packages:
   - apps/examples/*
   - packages/*
 onlyBuiltDependencies:
+  - '@sveltejs/kit'
+  - esbuild
+  - node
+  - sharp
   - svelte-preprocess
   - vue-demi

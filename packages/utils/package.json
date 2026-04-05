@@ -29,8 +29,10 @@
     "dev": "pnpm run build --watch"
   },
   "keywords": [],
-  "devDependencies": {
-    "@tsconfig/recommended": "^1.0.3",
+  "dependencies": {
     "@urami/types": "workspace:*"
+  },
+  "devDependencies": {
+    "@tsconfig/recommended": "^1.0.3"
   }
 }
