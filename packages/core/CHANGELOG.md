@@ -1,5 +1,11 @@
 # @urami/core
 
+## 2.0.0
+
+### Major Changes
+
+- 652267b: rendering optimized image via using native `<picture />` element to determine image format instead of let server decide
+
 ## 1.4.1
 
 ### Patch Changes

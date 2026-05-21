@@ -1,5 +1,12 @@
 # @urami/demo-astro
 
+## 0.1.3
+
+### Patch Changes
+
+- Updated dependencies [652267b]
+  - @urami/astro@2.0.0
+
 ## 0.1.2
 
 ### Patch Changes
