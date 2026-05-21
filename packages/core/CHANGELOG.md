@@ -1,5 +1,11 @@
 # @urami/core
 
+## 2.0.1
+
+### Patch Changes
+
+- 68c9d59: export types
+
 ## 2.0.0
 
 ### Major Changes
