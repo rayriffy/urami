@@ -1,5 +1,13 @@
 # @urami/astro
 
+## 2.0.1
+
+### Patch Changes
+
+- ad014cd: allow to pass config into urami astro integration
+- Updated dependencies [68c9d59]
+  - @urami/core@2.0.1
+
 ## 2.0.0
 
 ### Major Changes
