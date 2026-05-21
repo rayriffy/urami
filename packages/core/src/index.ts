@@ -20,6 +20,8 @@ import type { Config } from "./@types/Config.js";
 import type { ResponsePayload } from "./@types/ResponsePayload.js";
 import type { RequestHandler } from "./@types/RequestHandler.js";
 
+export type { Config, ResponsePayload, RequestHandler };
+
 export const createRequestHandler =
   (config: Partial<Config> = {}): RequestHandler => {
     // build general config
