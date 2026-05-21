@@ -22,7 +22,7 @@ export default function Home() {
 
       <h2 class="text-2xl font-bold pb-4">Demo</h2>
       <Image
-        src="https://demo.rayriffy.com/tom-scott.jpg"
+        src="https://httpmemes.netlify.app/200.jpg"
         width={801}
         height={801}
         alt="Tom Scott"

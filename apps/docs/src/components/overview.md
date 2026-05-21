@@ -21,10 +21,10 @@ The optimized source of an image will be followed by following format
 
 For example, if you have an image with the following source
 
-`https://demo.rayriffy.com/tom-scott.jpg`
+`https://httpmemes.netlify.app/200.jpg`
 
 And you want to render it with a width of `500px` and a quality of `75%`, the optimized source will be
 
-`/api/_image?url=https://demo.rayriffy.com/tom-scott.jpg&w=500&q=75`
+`/api/_image?url=https://httpmemes.netlify.app/200.jpg&w=500&q=75`
 
 If you want to change endpoint of the URL to be other than `/api/_image`, please refer to [Loader](/utilities/loader)

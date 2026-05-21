@@ -17,6 +17,7 @@
   export let quality: number = 75
 
   export let loader: Loader = defaultLoader
+  export let formats: string[] = ['webp', 'jpg']
 
   let imageElement: HTMLImageElement | undefined
   let loaded = false
@@ -27,23 +28,34 @@
     dispatch('load')
   }
 
-  $: builtProps = buildSource(loader, src, width, quality)
+  $: sources = formats.slice(0, -1).map(format => ({
+    format,
+    ...buildSource(loader, src, width, quality, format)
+  }))
+  $: fallbackFormat = formats[formats.length - 1]
+  $: fallbackProps = buildSource(loader, src, width, quality, fallbackFormat)
+
   $: if (imageElement?.complete) handleLoad()
 </script>
 
 <!-- svelte-ignore a11y-missing-attribute -->
-<img
-  bind:this={imageElement}
-  src={builtProps.src}
-  srcset={builtProps.srcSet}
-  decoding="async"
-  loading="lazy"
-  on:load={handleLoad}
-  {...$$restProps}
-  {...{
-    alt,
-    height,
-    width,
-    class: klass,
-  }}
-/>
+<picture>
+  {#each sources as source}
+    <source srcset={source.srcSet} type={`image/${source.format}`} />
+  {/each}
+  <img
+    bind:this={imageElement}
+    src={fallbackProps.src}
+    srcset={fallbackProps.srcSet}
+    decoding="async"
+    loading="lazy"
+    on:load={handleLoad}
+    {...$$restProps}
+    {...{
+      alt,
+      height,
+      width,
+      class: klass,
+    }}
+  />
+</picture>

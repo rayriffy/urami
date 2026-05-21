@@ -33,7 +33,7 @@ export const customLoader: Loader = (src, width, quality) => {
     q: quality.toString(),
   }).toString();
 
-  if (src.startsWith("https://demo.rayriffy.com"))
+  if (src.startsWith("https://httpmemes.netlify.app"))
     return `https://api.example.com/image?${params}`;
   else return `https://remote.foo.bar/image?${params}`;
 };
@@ -43,7 +43,7 @@ Then pass it to the component
 
 ```tsx
 <Image
-  src="https://demo.rayriffy.com/tom-scott.jpg"
+  src="https://httpmemes.netlify.app/200.jpg"
   width={801}
   loader={customLoader}
 />

@@ -70,10 +70,20 @@ import Image from '@urami/astro/image'
 ---
 
 <Image
-  src="https://demo.rayriffy.com/tom-scott.jpg"
+  src="https://httpmemes.netlify.app/200.jpg"
   width={801}
   height={801}
   alt="Tom Scott"
   class="rounded-xl shadow-md"
 />
 ```
+
+## Props
+
+| Name      | Type     | Default                                                                                            | Required | Description                                                      |
+| --------- | -------- | -------------------------------------------------------------------------------------------------- | -------- | ---------------------------------------------------------------- |
+| `src`     | `string` | -                                                                                                  | ✅       | Source of the image                                                  |
+| `width`   | `number` | -                                                                                                  | ✅       | Width of the image                                                   |
+| `height`  | `number` | -                                                                                                  | ❌       | Height of the image (Specify this will results in less layout shift) |
+| `quality` | `number` | `75`                                                                                               | ❌       | Quality of the image                                                 |
+| `formats` | `string[]` | `['webp', 'jpg']`                                                                                | ❌       | Formats to generate for the `<picture>` element                      |

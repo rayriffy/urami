@@ -25,7 +25,7 @@ import Image from '@urami/astro/image'
 ---
 
 <Image
-  src="https://demo.rayriffy.com/tom-scott.jpg"
+  src="https://httpmemes.netlify.app/200.jpg"
   width={801}
   height={801}
   alt="Tom Scott"

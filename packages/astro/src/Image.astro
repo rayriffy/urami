@@ -7,30 +7,46 @@ export interface Props extends astroHTML.JSX.ImgHTMLAttributes {
   src: string
   width: number
   quality?: number
+  formats?: string[]
 }
 
 const {
   src,
   width,
   quality = 75,
+  formats = ['webp', 'jpg'],
   ...rest
 } = Astro.props
 
-const astroImageLoader: Loader = (src, width, quality) =>
-  `/_urami?${new URLSearchParams({
+const astroImageLoader: Loader = (src, width, quality, format) => {
+  const params = new URLSearchParams({
     url: src,
     w: width.toString(),
     q: quality.toString(),
-  }).toString()}`
+  })
+  if (format) params.set('format', format)
+  return `/_urami?${params.toString()}`
+}
 
 
-const builtProps = buildSource(astroImageLoader, src, width, quality)
+const sources = formats.slice(0, -1).map(format => ({
+  format,
+  ...buildSource(astroImageLoader, src, width, quality, format)
+}))
+
+const fallbackFormat = formats[formats.length - 1]
+const fallbackProps = buildSource(astroImageLoader, src, width, quality, fallbackFormat)
 ---
 
-<img
-  src={builtProps.src}
-  srcset={builtProps.srcSet}
-  decoding="async"
-  loading="lazy"
-  {...rest}
-/>
+<picture>
+  {sources.map(source => (
+    <source srcset={source.srcSet} type={`image/${source.format}`} />
+  ))}
+  <img
+    src={fallbackProps.src}
+    srcset={fallbackProps.srcSet}
+    decoding="async"
+    loading="lazy"
+    {...rest}
+  />
+</picture>

@@ -8,6 +8,7 @@ export interface ImageProps extends JSX.ImgHTMLAttributes<HTMLImageElement> {
   width: number;
   quality?: number;
   loader?: Loader;
+  formats?: string[];
 }
 
 const Image: Component<ImageProps> = ({
@@ -15,18 +16,33 @@ const Image: Component<ImageProps> = ({
   width,
   quality = 75,
   loader = defaultLoader,
+  formats = ["webp", "jpg"],
   ...rest
 }) => {
-  const builtProps = buildSource(loader, src, width, quality);
+  const sources = formats.slice(0, -1).map((format) => {
+    const builtProps = buildSource(loader, src, width, quality, format);
+    return (
+      <source
+        srcset={builtProps.srcSet}
+        type={`image/${format}`}
+      />
+    );
+  });
+
+  const fallbackFormat = formats[formats.length - 1];
+  const fallbackProps = buildSource(loader, src, width, quality, fallbackFormat);
 
   return (
-    <img
-      src={builtProps.src}
-      srcset={builtProps.srcSet}
-      decoding="async"
-      loading="lazy"
-      {...rest}
-    />
+    <picture>
+      {sources}
+      <img
+        src={fallbackProps.src}
+        srcset={fallbackProps.srcSet}
+        decoding="async"
+        loading="lazy"
+        {...rest}
+      />
+    </picture>
   );
 };
 

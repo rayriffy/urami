@@ -40,7 +40,7 @@ At directory `src/routes/api/_image.ts`, which is a server endpoint for Urami. T
 import { createRequestHandler } from "@urami/core";
 
 const handler = createRequestHandler({
-  remoteDomains: ["demo.rayriffy.com"],
+  remoteDomains: ["httpmemes.netlify.app"],
 });
 
 export const GET = ({ request }) => handler(request);
@@ -52,7 +52,7 @@ import { createRequestHandler } from "@urami/core";
 import type { APIEvent } from "solid-start/api";
 
 const handler = createRequestHandler({
-  remoteDomains: ["demo.rayriffy.com"],
+  remoteDomains: ["httpmemes.netlify.app"],
 });
 
 export const GET = ({ request }: APIEvent) => handler(request);
@@ -73,7 +73,7 @@ import Image from "@urami/solid";
 export default function Page() {
   return (
     <Image
-      src="https://demo.rayriffy.com/tom-scott.jpg"
+      src="https://httpmemes.netlify.app/200.jpg"
       width={801}
       height={801}
       alt="Tom Scott"

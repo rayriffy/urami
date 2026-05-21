@@ -39,7 +39,7 @@ export default defineNuxtConfig({
 ```vue
 <template>
   <UramiImage
-    src="https://demo.rayriffy.com/tom-scott.jpg"
+    src="https://httpmemes.netlify.app/200.jpg"
     width="801"
     height="801"
     alt="Tom Scott"
@@ -71,8 +71,7 @@ Except `storePath` which has default value is `.nuxt-urami/images`.
 export default {
   urami: {
     handlerConfig: {
-      avif: false,
-      remoteDomains: ["demo.rayriffy.com"],
+      remoteDomains: ["httpmemes.netlify.app"],
       allowedDomains: ["nuxt-urami.netlify.app"],
       ttl: 1000 * 60 * 60 * 24 * 7,
       storePath: ".nuxt-urami/images", // default value

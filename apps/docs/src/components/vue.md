@@ -33,7 +33,7 @@ import Image from "@urami/vue";
 
 <template>
   <Image
-    src="https://demo.rayriffy.com/tom-scott.jpg"
+    src="https://httpmemes.netlify.app/200.jpg"
     width="801"
     height="801"
     alt="Tom Scott"
@@ -51,3 +51,4 @@ import Image from "@urami/vue";
 | `height`  | `number` | -                                                                                                  | ❌       | Height of the image (Specify this will results in less layout shift) |
 | `quality` | `number` | `75`                                                                                               | ❌       | Quality of the image                                                 |
 | `loader`  | `fn`     | [`defaultLoader`](https://github.com/rayriffy/urami/blob/main/packages/utils/src/defaultLoader.ts) | ❌       | Loader function, please refer to [Loader](/utilities/loader)         |
+| `formats` | `string[]` | `['webp', 'jpg']`                                                                                | ❌       | Formats to generate for the `<picture>` element                      |

@@ -46,7 +46,7 @@
     "sharp": "^0.34.5"
   },
   "dependencies": {
-    "@hapi/accept": "^6.0.2",
+    "@rayriffy/filesystem": "^1.0.1",
     "is-animated": "^2.0.2",
     "send": "^0.18.0"
   },

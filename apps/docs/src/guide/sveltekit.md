@@ -40,7 +40,7 @@ Create a file `routes/api/_image/+server.ts`, which is a server endpoint for Ura
 import { createRequestHandler } from "@urami/core";
 
 const handler = createRequestHandler({
-  remoteDomains: ["demo.rayriffy.com"],
+  remoteDomains: ["httpmemes.netlify.app"],
 });
 
 export const GET = (event) => handler(event.request);
@@ -52,7 +52,7 @@ import { createRequestHandler } from "@urami/core";
 import type { RequestHandler } from "@sveltejs/kit";
 
 const handler = createRequestHandler({
-  remoteDomains: ["demo.rayriffy.com"],
+  remoteDomains: ["httpmemes.netlify.app"],
 });
 
 export const GET: RequestHandler = (event) => handler(event.request);
@@ -73,7 +73,7 @@ Import `Image` component from `@urami/svelte` and use it like `next/image`.
 </script>
 
 <Image
-  src="https://demo.rayriffy.com/tom-scott.jpg"
+  src="https://httpmemes.netlify.app/200.jpg"
   width={801}
   height={801}
   alt="Tom Scott"
