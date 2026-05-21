@@ -1,5 +1,18 @@
 # @urami/astro
 
+## 2.0.0
+
+### Major Changes
+
+- 652267b: rendering optimized image via using native `<picture />` element to determine image format instead of let server decide
+
+### Patch Changes
+
+- Updated dependencies [652267b]
+  - @urami/types@2.0.0
+  - @urami/utils@2.0.0
+  - @urami/core@2.0.0
+
 ## 1.1.2
 
 ### Patch Changes
